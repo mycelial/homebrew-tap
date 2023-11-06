@@ -1,7 +1,7 @@
 class Mycelial < Formula
   desc "A CLI tool for managing mycelial projects."
   homepage "https://mycelial.com"
-  version "0.1.4"
+  version "0.1.5"
   license "Apache 2"
 
   on_macos do
