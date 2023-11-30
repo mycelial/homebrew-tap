@@ -1,0 +1,43 @@
+class Mycelial < Formula
+  desc "A CLI tool for managing mycelial projects."
+  homepage "https://mycelial.com"
+  version "{{{ version }}}"
+  license "Apache 2"
+
+  on_macos do
+    if Hardware::CPU.arm?
+      url "{{{ macos_arm_url }}}"
+      sha256 "{{{ macos_arm_sha256 }}}"
+
+    end
+
+    if Hardware::CPU.intel?
+      url "{{{ macos_intel_url }}}"
+      sha256 "{{ macos_intel_sha256 }}"
+
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "{{{ linux_arm64_url }}}"
+      sha256 "{{ linux_arm64_sha256 }}"
+
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_32_bit?
+      url "{{{ linux_arm32_url }}}"
+      sha256 "{{ linux_arm32_sha256 }}"
+
+    end
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "{{{ linux_intel_url }}}"
+      sha256 "{{ linux_intel_sha256 }}"
+
+    end
+  end
+
+  def install 
+    bin.install "mycelial"
+  end
+
+end
