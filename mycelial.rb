@@ -1,37 +1,37 @@
 class Mycelial < Formula
   desc "A CLI tool for managing mycelial projects."
   homepage "https://mycelial.com"
-  version "0.8.0"
+  version "0.9.0"
   license "Apache 2"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/mycelial/cli/releases/download/v0.8.0/mycelial-aarch64-apple-darwin.tgz"
-      sha256 "9959c4d4b8b1ff20974ebf53aaa51f388e2be0eae7dd51bed8cdb1fa90a49fd9"
+      url "https://github.com/mycelial/cli/releases/download/v0.9.0/mycelial-aarch64-apple-darwin.tgz"
+      sha256 "34b7344c7573c570a135e09d031af4ae6c311fa3db104f2d2d4f0826d80a6359"
 
     end
 
     if Hardware::CPU.intel?
-      url "https://github.com/mycelial/cli/releases/download/v0.8.0/mycelial-x86_64-apple-darwin.tgz"
-      sha256 "a08a15daaa1299c60fb8c05405a5d90f9e44517d961ef60746f153b41cf850e8"
+      url "https://github.com/mycelial/cli/releases/download/v0.9.0/mycelial-x86_64-apple-darwin.tgz"
+      sha256 "8b3b01a61411c0e12046790d5c1c4694dddcbfff6e1c80ccbe38b64d52e6be2b"
 
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mycelial/cli/releases/download/v0.8.0/mycelial-aarch64-unknown-linux-gnu.tgz"
-      sha256 "ac14bc1b341bf5a904f1d784086c949bae4fd17aa74198a27ee0aa39c2c796e5"
+      url "https://github.com/mycelial/cli/releases/download/v0.9.0/mycelial-aarch64-unknown-linux-gnu.tgz"
+      sha256 "9e07bea0c82cba7482d9d7a721006d742a0982f11ad776ac7a57d00d05b26baf"
 
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_32_bit?
-      url "https://github.com/mycelial/cli/releases/download/v0.8.0/mycelial-arm-unknown-linux-gnueabihf.tgz"
-      sha256 "5c1611fff28a6d205d370dca499d5d0a073843a8907d921c337dbb26a44d21ba"
+      url "https://github.com/mycelial/cli/releases/download/v0.9.0/mycelial-arm-unknown-linux-gnueabihf.tgz"
+      sha256 "3055332cff8c1c3c6eff48477608c7f57e6e504609cae41e695be4ac88e7bbf8"
 
     end
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mycelial/cli/releases/download/v0.8.0/mycelial-x86_64-unknown-linux-gnu.tgz"
-      sha256 "def6be396285b39ce559dd848e57fb5a59692486c97a24279c681f4d4ad2fdb0"
+      url "https://github.com/mycelial/cli/releases/download/v0.9.0/mycelial-x86_64-unknown-linux-gnu.tgz"
+      sha256 "c229bf45922d0cf723fd8342a7cb615a98ac1a65632ef18e0e38ed2b3143802b"
 
     end
   end
